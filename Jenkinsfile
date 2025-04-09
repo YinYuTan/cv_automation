@@ -7,14 +7,14 @@ pipeline{
                 checkout scm
             }
         }
-        stage('Checking Python Version') {
-            steps {
-                script {
-                    echo "Checking Python version..."
-                    sh 'python --version'
-                }
-            }
-        }
+        // stage('Checking Python Version') {
+        //     steps {
+        //         script {
+        //             echo "Checking Python version..."
+        //             bat 'python --version'
+        //         }
+        //     }
+        // }
         stage('Installing Virtual Environment'){
             steps{
                 script{
