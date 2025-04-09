@@ -11,7 +11,7 @@ pipeline{
             steps {
                 script {
                     echo "Checking Python version..."
-                    bat 'python --version'
+                    sh 'python --version'
                 }
             }
         }
