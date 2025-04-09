@@ -7,9 +7,10 @@ pipeline{
                 checkout scm
             }
         }
-        stage('Checking Python Version'){
-            steps{
-                script{
+        stage('Checking Python Version') {
+            steps {
+                script {
+                    echo "Checking Python version..."
                     bat 'python --version'
                 }
             }
