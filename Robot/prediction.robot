@@ -108,55 +108,56 @@ Predict From Directory Yellow
 Test Image Classification Green
     [Documentation]    Check static green or flag faulty
     Set BlackWidow V4 Keyboard Chroma Green
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Green
     Take Pictures Using Webcam
     Predict From Directory Green
 
 Test Image Classification Red
     [Documentation]    Check static red or flag faulty
     Set BlackWidow V4 Keyboard Chroma Red
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Red
     Take Pictures Using Webcam
     Predict From Directory Red
 
 Test Image Classification Pink
     [Documentation]    Check static pink or flag faulty
     Set BlackWidow V4 Keyboard Chroma Pink
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Pink
     Take Pictures Using Webcam
     Predict From Directory Pink
 
 Test Image Classification White
     [Documentation]    Check static white or flag faulty
     Set BlackWidow V4 Keyboard Chroma White
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete White
     Take Pictures Using Webcam
     Predict From Directory White
 
 Test Image Classification Cyan
     [Documentation]    Check static cyan or flag faulty
     Set BlackWidow V4 Keyboard Chroma Cyan
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Cyan
     Take Pictures Using Webcam
     Predict From Directory Cyan
 
 Test Image Classification Blue
     [Documentation]    Check static blue or flag faulty
     Set BlackWidow V4 Keyboard Chroma Blue
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Blue
     Take Pictures Using Webcam
     Predict From Directory Blue
 
 Test Image Classification Orange
     [Documentation]    Check static orange or flag faulty
     Set BlackWidow V4 Keyboard Chroma Orange
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Orange
     Take Pictures Using Webcam
     Predict From Directory Orange
 
 Test Image Classification Yellow
     [Documentation]    Check static yellow or flag faulty
     Set BlackWidow V4 Keyboard Chroma Yellow
-    Check If Chroma Status Is Complete
+    Check If Chroma Status Is Complete Yellow
     Take Pictures Using Webcam
     Predict From Directory Yellow
+

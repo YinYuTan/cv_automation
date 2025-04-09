@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-09T16:36:04.402098" rpa="false" schemaversion="5">
+<suite id="s1" name="Prediction" source="c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot">
+<test id="s1-t1" name="Test Image Classification Green" line="108">
+<kw name="Set BlackWidow V4 Keyboard Chroma Green">
+<kw name="Perform Chroma Test BlackWidow V4 Green" owner="BlackWidow">
+<msg time="2025-04-09T16:36:08.010611" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
+SYNAPSE ATTACHED: PASS</msg>
+<status status="PASS" start="2025-04-09T16:36:06.483722" elapsed="1.526889"/>
+</kw>
+<status status="PASS" start="2025-04-09T16:36:06.483722" elapsed="1.527897"/>
+</kw>
+<kw name="Check If Chroma Status Is Complete Green">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Status Green" owner="BlackWidow">
+<status status="PASS" start="2025-04-09T16:36:08.012617" elapsed="0.000000"/>
+</kw>
+<msg time="2025-04-09T16:36:08.012617" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Check Status Green</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-09T16:36:08.012617" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>msg=Chroma Setup Incomplete.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-04-09T16:36:08.012617" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2025-04-09T16:36:08.011619" elapsed="0.001998"/>
+</kw>
+<kw name="Take Pictures Using Webcam">
+<kw name="Run Process" owner="Process">
+<msg time="2025-04-09T16:36:08.014611" level="INFO">Starting process:
+"c:\Users\Yin Yu\Documents\cv_automation\Robot/video.bat"</msg>
+<msg time="2025-04-09T16:36:08.020614" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-04-09T16:36:08.038610" level="INFO">Process completed.</msg>
+<arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${BATCH_SCRIPT}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-04-09T16:36:08.014611" elapsed="0.023999"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-09T16:36:13.050579" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-09T16:36:08.039610" elapsed="5.010969"/>
+</kw>
+<status status="PASS" start="2025-04-09T16:36:08.014611" elapsed="5.037960"/>
+</kw>
+<kw name="Predict From Directory Green">
+<kw name="Predict Directory Green" owner="Predict">
+<msg time="2025-04-09T16:36:13.055571" level="INFO">Error loading model or directory: No file or directory found at c:\Users\Yin Yu\Documents\cv_automation\Robot/cv-dentritemodelsimage_multiclass_model.h5</msg>
+<msg time="2025-04-09T16:36:13.056571" level="INFO">${result} = FAIL</msg>
+<var>${result}</var>
+<arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}</arg>
+<arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${IMAGE_PATH}</arg>
+<status status="PASS" start="2025-04-09T16:36:13.054580" elapsed="0.003000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<msg time="2025-04-09T16:36:13.059579" level="FAIL">FAIL != PASS</msg>
+<arg>${result}</arg>
+<arg>PASS</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="FAIL" start="2025-04-09T16:36:13.057580" elapsed="0.002999">FAIL != PASS</status>
+</kw>
+<status status="FAIL" start="2025-04-09T16:36:13.053579" elapsed="0.007000">FAIL != PASS</status>
+</kw>
+<doc>Check static green or flag faulty</doc>
+<status status="FAIL" start="2025-04-09T16:36:06.482717" elapsed="6.583863">FAIL != PASS</status>
+</test>
+<status status="FAIL" start="2025-04-09T16:36:04.405097" elapsed="8.669482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Prediction" id="s1" pass="0" fail="1" skip="0">Prediction</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-09T16:36:04.423090" level="ERROR">Error in file 'c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Yin Yu\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_debug_adapter
+  C:\Users\Yin Yu\Documents\cv_automation
+  c:\Users\Yin Yu\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src
+  c:\Users\Yin Yu\.vscode\extensions\robocorp.robotframework-lsp-1.13.0\src\robotframework_ls\vendored
+  C:\Anaconda3\envs\tf\python310.zip
+  C:\Anaconda3\envs\tf\DLLs
+  C:\Anaconda3\envs\tf\lib
+  C:\Anaconda3\envs\tf
+  C:\Anaconda3\envs\tf\lib\site-packages
+  C:\Anaconda3\envs\tf\lib\site-packages\win32
+  C:\Anaconda3\envs\tf\lib\site-packages\win32\lib
+  C:\Anaconda3\envs\tf\lib\site-packages\Pythonwin</msg>
+</errors>
+</robot>

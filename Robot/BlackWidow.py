@@ -14,21 +14,22 @@ isFinishedYellow= False
 def PerformChromaTestBlackWidowV4Green():
     global isFinishedGreen
 
-    lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div.nav.active'
-    tmp = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
+
+    lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
+    tmp = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.icon.expand'
+    static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9) > div'
     
     colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
     green = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(21)'
 
     driver = SynapseWebDriverClass()
-    driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
+    driver.switchSynapseTabTo("BLACKWIDOW V4 PRO 75%")
     driver.clickOnElement(lighting_selector)
     driver.clickOnElement(tmp)
     driver.clickOnElement(static)
 
-    driver.clickOnElement(colour_dropdown)
-    driver.clickOnElement(green)
+    # driver.clickOnElement(colour_dropdown)
+    # driver.clickOnElement(green)
 
     isFinishedGreen = True
 
@@ -37,7 +38,9 @@ def PerformChromaTestBlackWidowV4Red():
     global isFinishedRed
 
     lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div.nav.active'
-    tmp = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
+
+    
+    dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.icon.expand'
     static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
     
     colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
@@ -46,7 +49,7 @@ def PerformChromaTestBlackWidowV4Red():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    driver.clickOnElement(tmp)
+    driver.clickOnElement(dropdown)
     driver.clickOnElement(static)
 
     driver.clickOnElement(colour_dropdown)
