@@ -9,3 +9,8 @@
 
 [2025-04-09 15:23:52] Photo saved to: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\photo.jpg
 
+[2025-04-10 15:04:52] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-04-10 15:04:52] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-04-10 15:04:53] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
