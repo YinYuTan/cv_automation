@@ -1,4 +1,4 @@
 tensorflow==2.10.1
-robotframework==4.0.3
 selenium==4.9.1
 numpy==1.26.4
+# robotframework==4.0.3
