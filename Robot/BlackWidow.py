@@ -23,7 +23,7 @@ def PerformChromaTestBlackWidowV4Green():
     green = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(21)'
 
     driver = SynapseWebDriverClass()
-    driver.switchSynapseTabTo("BLACKWIDOW V4 PRO 75%")
+    driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
     driver.clickOnElement(tmp)
     driver.clickOnElement(static)
