@@ -47,21 +47,24 @@ def PredictDirectoryGreen(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
             result = Predict(model, img_path)
+            logger.info(f"🔍 Prediction result: {result}")
             if result == "green":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
-    
 
 @keyword("Predict Directory Red")
 def PredictDirectoryRed(model_path, directory):

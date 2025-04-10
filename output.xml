@@ -1,74 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-10T11:31:55.711759" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-10T15:27:11.042278" rpa="false" schemaversion="5">
 <suite id="s1" name="Prediction" source="c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot">
 <test id="s1-t1" name="Test Image Classification Green" line="108">
 <kw name="Set BlackWidow V4 Keyboard Chroma Green">
 <kw name="Perform Chroma Test BlackWidow V4 Green" owner="BlackWidow">
-<msg time="2025-04-10T11:32:00.089679" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
+<msg time="2025-04-10T15:27:14.902771" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
 SYNAPSE ATTACHED: PASS</msg>
-<status status="PASS" start="2025-04-10T11:31:57.975322" elapsed="2.115372"/>
+<status status="PASS" start="2025-04-10T15:27:13.352940" elapsed="1.550831"/>
 </kw>
-<status status="PASS" start="2025-04-10T11:31:57.974324" elapsed="2.116370"/>
+<status status="PASS" start="2025-04-10T15:27:13.351940" elapsed="1.551831"/>
 </kw>
 <kw name="Check If Chroma Status Is Complete Green">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Check Status Green" owner="BlackWidow">
-<status status="PASS" start="2025-04-10T11:32:00.092680" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-10T15:27:14.905291" elapsed="0.000000"/>
 </kw>
-<msg time="2025-04-10T11:32:00.092680" level="INFO">${status} = True</msg>
+<msg time="2025-04-10T15:27:14.905291" level="INFO">${status} = True</msg>
 <var>${status}</var>
 <arg>Check Status Green</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-04-10T11:32:00.091685" elapsed="0.000995"/>
+<status status="PASS" start="2025-04-10T15:27:14.905291" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${status}</arg>
 <arg>msg=Chroma Setup Incomplete.</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-04-10T11:32:00.092680" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-10T15:27:14.905291" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-10T11:32:00.091685" elapsed="0.001997"/>
+<status status="PASS" start="2025-04-10T15:27:14.904774" elapsed="0.000517"/>
 </kw>
 <kw name="Take Pictures Using Webcam">
 <kw name="Run Process" owner="Process">
-<msg time="2025-04-10T11:32:00.094678" level="INFO">Starting process:
+<msg time="2025-04-10T15:27:14.907299" level="INFO">Starting process:
 "c:\Users\Yin Yu\Documents\cv_automation\Robot/video.bat"</msg>
-<msg time="2025-04-10T11:32:00.101775" level="INFO">Waiting for process to complete.</msg>
-<msg time="2025-04-10T11:32:00.119147" level="INFO">Process completed.</msg>
+<msg time="2025-04-10T15:27:14.912307" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-04-10T15:27:26.911241" level="INFO">Process completed.</msg>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${BATCH_SCRIPT}</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2025-04-10T11:32:00.094678" elapsed="0.024469"/>
+<status status="PASS" start="2025-04-10T15:27:14.906308" elapsed="12.004933"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-10T11:32:05.124490" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-10T15:27:31.922665" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-10T11:32:00.120152" elapsed="5.004338"/>
+<status status="PASS" start="2025-04-10T15:27:26.911241" elapsed="5.011424"/>
 </kw>
-<status status="PASS" start="2025-04-10T11:32:00.093682" elapsed="5.030808"/>
+<status status="PASS" start="2025-04-10T15:27:14.906308" elapsed="17.016357"/>
 </kw>
 <kw name="Predict From Directory Green">
 <kw name="Predict Directory Green" owner="Predict">
-<msg time="2025-04-10T11:32:05.125517" level="INFO">Error loading model or directory: No file or directory found at c:\Users\Yin Yu\Documents\cv_automation\Robot/cv-dentritemodelsimage_multiclass_model.h5</msg>
-<msg time="2025-04-10T11:32:05.126521" level="INFO">${result} = FAIL</msg>
+<msg time="2025-04-10T15:27:31.924664" level="INFO">Error loading model or directory: No file or directory found at c:\Users\Yin Yu\Documents\cv_automation\Robot/cv-dentritemodelsimage_multiclass_model.h5</msg>
+<msg time="2025-04-10T15:27:31.925670" level="INFO">${result} = FAIL</msg>
 <var>${result}</var>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}</arg>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${IMAGE_PATH}</arg>
-<status status="PASS" start="2025-04-10T11:32:05.125517" elapsed="0.001004"/>
+<status status="PASS" start="2025-04-10T15:27:31.924664" elapsed="0.001006"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<msg time="2025-04-10T11:32:05.127519" level="FAIL">FAIL != PASS</msg>
+<msg time="2025-04-10T15:27:31.925670" level="FAIL">FAIL != PASS</msg>
 <arg>${result}</arg>
 <arg>PASS</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="FAIL" start="2025-04-10T11:32:05.127519" elapsed="0.000591">FAIL != PASS</status>
+<status status="FAIL" start="2025-04-10T15:27:31.925670" elapsed="0.001000">FAIL != PASS</status>
 </kw>
-<status status="FAIL" start="2025-04-10T11:32:05.125517" elapsed="0.002593">FAIL != PASS</status>
+<status status="FAIL" start="2025-04-10T15:27:31.924161" elapsed="0.003514">FAIL != PASS</status>
 </kw>
 <doc>Check static green or flag faulty</doc>
-<status status="FAIL" start="2025-04-10T11:31:57.973322" elapsed="7.155868">FAIL != PASS</status>
+<status status="FAIL" start="2025-04-10T15:27:13.351940" elapsed="18.575735">FAIL != PASS</status>
 </test>
-<status status="FAIL" start="2025-04-10T11:31:55.715748" elapsed="9.414438"/>
+<status status="FAIL" start="2025-04-10T15:27:11.045791" elapsed="20.882883"/>
 </suite>
 <statistics>
 <total>

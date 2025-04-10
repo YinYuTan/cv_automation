@@ -76,31 +76,31 @@ Predict From Directory Green
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Red
-    ${result}=    Predict Directory Red ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Red     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Pink
-    ${result}=    Predict Directory Pink ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Pink     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory White
-    ${result}=    Predict Directory White ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory White     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Cyan
-    ${result}=    Predict Directory Cyan ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Cyan     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Blue
-    ${result}=    Predict Directory Blue ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Blue     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
     
 Predict From Directory Orange
-    ${result}=    Predict Directory Orange ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Orange     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Yellow
-    ${result}=    Predict Directory Yellow ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Yellow     ${CURDIR}/${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 

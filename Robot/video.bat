@@ -10,3 +10,4 @@ set EXECUTABLE_PATH=%SCRIPT_DIR%VideoAPI.exe
 
 REM Run the executable with the user-provided values
 "%EXECUTABLE_PATH%" %numVideos% %MODE%
+
