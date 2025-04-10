@@ -1,0 +1,11 @@
+[2025-04-09 15:23:51] Picture Path: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\pictures
+[2025-04-09 15:23:51] Creating path: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\pictures
+[2025-04-09 15:23:51] Photo taken file will be saved as: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\photo.jpg
+
+[2025-04-09 15:23:51] Photo saved to: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\photo.jpg
+
+[2025-04-09 15:23:52] Picture Path: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\pictures
+[2025-04-09 15:23:52] Photo taken file will be saved as: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\photo.jpg
+
+[2025-04-09 15:23:52] Photo saved to: C:\Users\Yin Yu\Downloads\Capstone-Revised-main\Capstone-Revised-main\Camera Driver\photo.jpg
+
