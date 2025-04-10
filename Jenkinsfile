@@ -55,4 +55,17 @@ pipeline{
             }
         }
     }
+
+    post {
+        always {
+            archiveArtifacts artifacts: 'results/**', allowEmptyArchive: true
+
+            step([$class: 'RobotPublisher',
+                outputPath: 'results',
+                outputFileName: 'output.xml',
+                reportFileName: 'report.html',
+                logFileName: 'log.html'
+            ])
+        }
+    }
 }
