@@ -13,18 +13,13 @@ isFinishedYellow= False
 lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
 pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.icon.expand'
 static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9) > div'
-colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
+colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown > div.icon.expand'
 
 @keyword("Perform Chroma Test BlackWidow V4 Green")
 def PerformChromaTestBlackWidowV4Green():
     global isFinishedGreen
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.icon.expand'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9) > div'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-
-    green = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(21)'
+    green = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(21)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -41,11 +36,7 @@ def PerformChromaTestBlackWidowV4Green():
 def PerformChromaTestBlackWidowV4Red():
     global isFinishedRed
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'    
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.icon.expand'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'  
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    red = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(18)'
+    red = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(18)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -62,11 +53,7 @@ def PerformChromaTestBlackWidowV4Red():
 def PerformChromaTestBlackWidowV4Pink():
     global isFinishedPink
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    pink = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(24)'
+    pink = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(24)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -83,11 +70,7 @@ def PerformChromaTestBlackWidowV4Pink():
 def PerformChromaTestBlackWidowV4White():
     global isFinishedWhite
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    white = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(17)'
+    white = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(17)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -104,11 +87,7 @@ def PerformChromaTestBlackWidowV4White():
 def PerformChromaTestBlackWidowV4Cyan():
     global isFinishedCyan
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    cyan = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(22)'
+    cyan = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(22)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -125,11 +104,7 @@ def PerformChromaTestBlackWidowV4Cyan():
 def PerformChromaTestBlackWidowV4Blue():
     global isFinishedBlue
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    blue = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(23)'
+    blue = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(23)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -146,11 +121,7 @@ def PerformChromaTestBlackWidowV4Blue():
 def PerformChromaTestBlackWidowV4Orange():
     global isFinishedOrange
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    orange = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(19)'
+    orange = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(19)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
@@ -167,11 +138,7 @@ def PerformChromaTestBlackWidowV4Orange():
 def PerformChromaTestBlackWidowV4Yellow():
     global isFinishedYellow
 
-    # lighting_selector = '#root > div > div.nav-tabs > div.navs-wrapper > div:nth-child(2)'
-    # pattern_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-dropdown > div.selected.raw-text'
-    # static = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.chroma-flex-row > div.dropdown-area > div.s3-options.unsetZ.flex.expand > div:nth-child(9)'
-    # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
-    yellow = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(20)'
+    yellow = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-options.flex.color-opts.expand > div:nth-child(1) > div:nth-child(20)'
 
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")

@@ -1,125 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-10T10:40:47.730837" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-10T10:57:36.523952" rpa="false" schemaversion="5">
 <suite id="s1" name="Prediction" source="c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot">
-<test id="s1-t1" name="Test Image Classification Green" line="108">
-<kw name="Set BlackWidow V4 Keyboard Chroma Green">
-<kw name="Perform Chroma Test BlackWidow V4 Green" owner="BlackWidow">
-<msg time="2025-04-10T10:40:51.820548" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
+<test id="s1-t1" name="Test Image Classification Red" line="115">
+<kw name="Set BlackWidow V4 Keyboard Chroma Red">
+<kw name="Perform Chroma Test BlackWidow V4 Red" owner="BlackWidow">
+<msg time="2025-04-10T10:57:40.547784" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
 SYNAPSE ATTACHED: PASS</msg>
-<msg time="2025-04-10T10:40:51.820548" level="FAIL">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#body-wrapper &gt; div &gt; div.widget-col.col-right.flex &gt; div &gt; div &gt; div:nth-child(2) &gt; div.modes-area.active &gt; div.flex.effects-area &gt; div &gt; div.dropdown-area.dropdown-color &gt; div.s3-dropdown"}
-  (Session info: chrome=124.0.6367.243); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF792371522+60802]
-	(No symbol) [0x00007FF7922EAC22]
-	(No symbol) [0x00007FF7921A7CE4]
-	(No symbol) [0x00007FF7921F6D4D]
-	(No symbol) [0x00007FF7921F6E1C]
-	(No symbol) [0x00007FF79223CE37]
-	(No symbol) [0x00007FF79221ABBF]
-	(No symbol) [0x00007FF79223A224]
-	(No symbol) [0x00007FF79221A923]
-	(No symbol) [0x00007FF7921E8FEC]
-	(No symbol) [0x00007FF7921E9C21]
-	GetHandleVerifier [0x00007FF7926741BD+3217949]
-	GetHandleVerifier [0x00007FF7926B6157+3488183]
-	GetHandleVerifier [0x00007FF7926AF0DF+3459391]
-	GetHandleVerifier [0x00007FF79242B8E6+823622]
-	(No symbol) [0x00007FF7922F5FBF]
-	(No symbol) [0x00007FF7922F0EE4]
-	(No symbol) [0x00007FF7922F1072]
-	(No symbol) [0x00007FF7922E18C4]
-	BaseThreadInitThunk [0x00007FFA5BEE259D+29]
-	RtlUserThreadStart [0x00007FFA5C80AF38+40]
-</msg>
-<status status="FAIL" start="2025-04-10T10:40:50.165489" elapsed="1.657054">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#body-wrapper &gt; div &gt; div.widget-col.col-right.flex &gt; div &gt; div &gt; div:nth-child(2) &gt; div.modes-area.active &gt; div.flex.effects-area &gt; div &gt; div.dropdown-area.dropdown-color &gt; div.s3-dropdown"}
-  (Session info: chrome=124.0.6367.243); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF792371522+60802]
-	(No symbol) [0x00007FF7922EAC22]
-	(No symbol) [0x00007FF7921A7CE4]
-	(No symbol) [0x00007FF7921F6D4D]
-	(No symbol) [0x00007FF7921F6E1C]
-	(No symbol) [0x00007FF79223CE37]
-	(No symbol) [0x00007FF79221ABBF]
-	(No symbol) [0x00007FF79223A224]
-	(No symbol) [0x00007FF79221A923]
-	(No symbol) [0x00007FF7921E8FEC]
-	(No symbol) [0x00007FF7921E9C21]
-	GetHandleVerifier [0x00007FF7926741BD+3217949]
-	GetHandleVerifier [0x00007FF7926B6157+3488183]
-	GetHandleVerifier [0x00007FF7926AF0DF+3459391]
-	GetHandleVerifier [0x00007FF79242B8E6+823622]
-	(No symbol) [0x00007FF7922F5FBF]
-	(No symbol) [0x00007FF7922F0EE4]
-	(No symbol) [0x00007FF7922F1072]
-	(No symbol) [0x00007FF7922E18C4]
-	BaseThreadInitThunk [0x00007FFA5BEE259D+29]
-	RtlUserThreadStart [0x00007FFA5C80AF38+40]
-</status>
+<status status="PASS" start="2025-04-10T10:57:38.685814" elapsed="1.861970"/>
 </kw>
-<status status="FAIL" start="2025-04-10T10:40:50.164447" elapsed="1.658096">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#body-wrapper &gt; div &gt; div.widget-col.col-right.flex &gt; div &gt; div &gt; div:nth-child(2) &gt; div.modes-area.active &gt; div.flex.effects-area &gt; div &gt; div.dropdown-area.dropdown-color &gt; div.s3-dropdown"}
-  (Session info: chrome=124.0.6367.243); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF792371522+60802]
-	(No symbol) [0x00007FF7922EAC22]
-	(No symbol) [0x00007FF7921A7CE4]
-	(No symbol) [0x00007FF7921F6D4D]
-	(No symbol) [0x00007FF7921F6E1C]
-	(No symbol) [0x00007FF79223CE37]
-	(No symbol) [0x00007FF79221ABBF]
-	(No symbol) [0x00007FF79223A224]
-	(No symbol) [0x00007FF79221A923]
-	(No symbol) [0x00007FF7921E8FEC]
-	(No symbol) [0x00007FF7921E9C21]
-	GetHandleVerifier [0x00007FF7926741BD+3217949]
-	GetHandleVerifier [0x00007FF7926B6157+3488183]
-	GetHandleVerifier [0x00007FF7926AF0DF+3459391]
-	GetHandleVerifier [0x00007FF79242B8E6+823622]
-	(No symbol) [0x00007FF7922F5FBF]
-	(No symbol) [0x00007FF7922F0EE4]
-	(No symbol) [0x00007FF7922F1072]
-	(No symbol) [0x00007FF7922E18C4]
-	BaseThreadInitThunk [0x00007FFA5BEE259D+29]
-	RtlUserThreadStart [0x00007FFA5C80AF38+40]
-</status>
+<status status="PASS" start="2025-04-10T10:57:38.684810" elapsed="1.862974"/>
 </kw>
-<kw name="Check If Chroma Status Is Complete Green">
-<status status="NOT RUN" start="2025-04-10T10:40:51.823540" elapsed="0.000000"/>
+<kw name="Check If Chroma Status Is Complete Red">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Check Status Red" owner="BlackWidow">
+<status status="PASS" start="2025-04-10T10:57:40.548787" elapsed="0.000000"/>
+</kw>
+<msg time="2025-04-10T10:57:40.548787" level="INFO">${status} = True</msg>
+<var>${status}</var>
+<arg>Check Status Red</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-04-10T10:57:40.548787" elapsed="0.000990"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${status}</arg>
+<arg>msg=Chroma Setup Incomplete.</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-04-10T10:57:40.549777" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-04-10T10:57:40.548787" elapsed="0.000990"/>
 </kw>
 <kw name="Take Pictures Using Webcam">
-<status status="NOT RUN" start="2025-04-10T10:40:51.823540" elapsed="0.000000"/>
+<kw name="Run Process" owner="Process">
+<msg time="2025-04-10T10:57:40.550776" level="INFO">Starting process:
+"c:\Users\Yin Yu\Documents\cv_automation\Robot/video.bat"</msg>
+<msg time="2025-04-10T10:57:40.557838" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-04-10T10:57:40.570373" level="INFO">Process completed.</msg>
+<arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${BATCH_SCRIPT}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-04-10T10:57:40.550776" elapsed="0.019597"/>
 </kw>
-<kw name="Predict From Directory Green">
-<status status="NOT RUN" start="2025-04-10T10:40:51.824530" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-04-10T10:57:45.578125" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-04-10T10:57:40.570373" elapsed="5.007752"/>
 </kw>
-<doc>Check static green or flag faulty</doc>
-<status status="FAIL" start="2025-04-10T10:40:50.163436" elapsed="1.661094">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"#body-wrapper &gt; div &gt; div.widget-col.col-right.flex &gt; div &gt; div &gt; div:nth-child(2) &gt; div.modes-area.active &gt; div.flex.effects-area &gt; div &gt; div.dropdown-area.dropdown-color &gt; div.s3-dropdown"}
-  (Session info: chrome=124.0.6367.243); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Stacktrace:
-	GetHandleVerifier [0x00007FF792371522+60802]
-	(No symbol) [0x00007FF7922EAC22]
-	(No symbol) [0x00007FF7921A7CE4]
-	(No symbol) [0x00007FF7921F6D4D]
-	(No symbol) [0x00007FF7921F6E1C]
-	(No symbol) [0x00007FF79223CE37]
-	(No symbol) [0x00007FF79221ABBF]
-	(No symbol) [0x00007FF79223A224]
-	(No symbol) [0x00007FF79221A923]
-	(No symbol) [0x00007FF7921E8FEC]
-	(No symbol) [0x00007FF7921E9C21]
-	GetHandleVerifier [0x00007FF7926741BD+3217949]
-	GetHandleVerifier [0x00007FF7926B6157+3488183]
-	GetHandleVerifier [0x00007FF7926AF0DF+3459391]
-	GetHandleVerifier [0x00007FF79242B8E6+823622]
-	(No symbol) [0x00007FF7922F5FBF]
-	(No symbol) [0x00007FF7922F0EE4]
-	(No symbol) [0x00007FF7922F1072]
-	(No symbol) [0x00007FF7922E18C4]
-	BaseThreadInitThunk [0x00007FFA5BEE259D+29]
-	RtlUserThreadStart [0x00007FFA5C80AF38+40]
-</status>
+<status status="PASS" start="2025-04-10T10:57:40.549777" elapsed="5.028348"/>
+</kw>
+<kw name="Predict From Directory Red">
+<kw name="Predict Directory Red c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}">
+<msg time="2025-04-10T10:57:45.582118" level="FAIL">No keyword with name 'Predict Directory Red c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}' found. Did you try using keyword 'Predict.Predict' or 'Predict.Predict Directory Red' and forgot to use enough whitespace between keyword and arguments?</msg>
+<var>${result}</var>
+<arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${IMAGE_PATH}</arg>
+<status status="FAIL" start="2025-04-10T10:57:45.582118" elapsed="0.000000">No keyword with name 'Predict Directory Red c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}' found. Did you try using keyword 'Predict.Predict' or 'Predict.Predict Directory Red' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>PASS</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" start="2025-04-10T10:57:45.582118" elapsed="0.001503"/>
+</kw>
+<status status="FAIL" start="2025-04-10T10:57:45.580118" elapsed="0.003503">No keyword with name 'Predict Directory Red c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}' found. Did you try using keyword 'Predict.Predict' or 'Predict.Predict Directory Red' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<doc>Check static red or flag faulty</doc>
+<status status="FAIL" start="2025-04-10T10:57:38.683805" elapsed="6.899816">No keyword with name 'Predict Directory Red c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}' found. Did you try using keyword 'Predict.Predict' or 'Predict.Predict Directory Red' and forgot to use enough whitespace between keyword and arguments?</status>
 </test>
-<status status="FAIL" start="2025-04-10T10:40:47.733841" elapsed="4.091706"/>
+<status status="FAIL" start="2025-04-10T10:57:36.526959" elapsed="9.057666"/>
 </suite>
 <statistics>
 <total>
@@ -132,7 +78,7 @@ Stacktrace:
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-10T10:40:47.752843" level="ERROR">Error in file 'c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+<msg time="2025-04-10T10:57:36.553766" level="ERROR">Error in file 'c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot' on line 2: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
