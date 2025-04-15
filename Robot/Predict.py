@@ -49,8 +49,8 @@ def PredictDirectoryGreen(model_path, directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
-            logger.info(f"🔍 Prediction result: {result}")
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "green":
                 return "PASS"
             elif result == "faulty":
@@ -72,18 +72,22 @@ def PredictDirectoryRed(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "red":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -93,18 +97,22 @@ def PredictDirectoryPink(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "pink":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -114,18 +122,22 @@ def PredictDirectoryWhite(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "white":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -135,18 +147,22 @@ def PredictDirectoryCyan(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "cyan":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -156,18 +172,22 @@ def PredictDirectoryBlue(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "blue":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -177,18 +197,22 @@ def PredictDirectoryOrange(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "orange":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
     
@@ -198,17 +222,21 @@ def PredictDirectoryYellow(model_path, directory):
         model = LoadModel(model_path)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path)
+            result = Predict(model, img_path, class_indices)
+            logger.info(f"Prediction result: {result}")
             if result == "yellow":
                 return "PASS"
             elif result == "faulty":
-                logger.error(f"Test Failed: {img_path} is faulty.")
+                logger.error(f"Test Failed: {result} is faulty.")
                 return "FAIL"
             else:
                     # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
                     return "FAIL"
             
     except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
         print(f"Error loading model or directory: {e}")
         return "FAIL"
