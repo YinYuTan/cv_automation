@@ -14,3 +14,12 @@
 
 [2025-04-10 15:04:53] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
 
+[2025-04-15 12:00:50] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-04-15 12:00:50] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-04-15 12:00:50] Failed to take photos: Hardware MFT failed to start streaming due to lack of hardware resources. (HRESULT: 0x-1072875772)
+[2025-04-15 12:01:47] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-04-15 12:01:47] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-04-15 12:01:48] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
