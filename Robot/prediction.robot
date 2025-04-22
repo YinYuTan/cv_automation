@@ -7,7 +7,7 @@ Library      BlackWidow.py
 
 *** Variables ***
 ${BATCH_SCRIPT}      video.bat
-${MODEL_PATH}        image_multiclass_model.h5
+${MODEL_PATH}        multiclass_img2_model.h5
 ${IMAGE_PATH}        pictures
 
 *** Keywords ***

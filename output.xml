@@ -1,93 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-15T16:36:52.143888" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.10.16 on win32)" generated="2025-04-22T16:30:04.233532" rpa="false" schemaversion="5">
 <suite id="s1" name="Prediction" source="c:\Users\Yin Yu\Documents\cv_automation\Robot\prediction.robot">
-<test id="s1-t1" name="Test Image Classification Green" line="108">
-<kw name="Set BlackWidow V4 Keyboard Chroma Green">
-<kw name="Perform Chroma Test BlackWidow V4 Green" owner="BlackWidow">
-<msg time="2025-04-15T16:36:56.663513" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
+<test id="s1-t1" name="Test Image Classification Yellow" line="157">
+<kw name="Set BlackWidow V4 Keyboard Chroma Yellow">
+<kw name="Perform Chroma Test BlackWidow V4 Yellow" owner="BlackWidow">
+<msg time="2025-04-22T16:30:08.218471" level="INFO">Chrome Executable: c:\Users\Yin Yu\Documents\cv_automation\Robot\chromedriver.exe
 SYNAPSE ATTACHED: PASS</msg>
-<status status="PASS" start="2025-04-15T16:36:54.626487" elapsed="2.038954"/>
+<status status="PASS" start="2025-04-22T16:30:06.640501" elapsed="1.580775"/>
 </kw>
-<status status="PASS" start="2025-04-15T16:36:54.625487" elapsed="2.039954"/>
+<status status="PASS" start="2025-04-22T16:30:06.639500" elapsed="1.581776"/>
 </kw>
-<kw name="Check If Chroma Status Is Complete Green">
+<kw name="Check If Chroma Status Is Complete Yellow">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Check Status Green" owner="BlackWidow">
-<status status="PASS" start="2025-04-15T16:36:56.666438" elapsed="0.000000"/>
+<kw name="Check Status Yellow" owner="BlackWidow">
+<status status="PASS" start="2025-04-22T16:30:08.222282" elapsed="0.000000"/>
 </kw>
-<msg time="2025-04-15T16:36:56.666438" level="INFO">${status} = True</msg>
+<msg time="2025-04-22T16:30:08.223293" level="INFO">${status} = True</msg>
 <var>${status}</var>
-<arg>Check Status Green</arg>
+<arg>Check Status Yellow</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-04-15T16:36:56.666438" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-22T16:30:08.222282" elapsed="0.001011"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${status}</arg>
 <arg>msg=Chroma Setup Incomplete.</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2025-04-15T16:36:56.666438" elapsed="0.000000"/>
+<status status="PASS" start="2025-04-22T16:30:08.223293" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-04-15T16:36:56.665441" elapsed="0.001997"/>
+<status status="PASS" start="2025-04-22T16:30:08.221276" elapsed="0.002017"/>
 </kw>
 <kw name="Take Pictures Using Webcam">
 <kw name="Run Process" owner="Process">
-<msg time="2025-04-15T16:36:56.667438" level="INFO">Starting process:
+<msg time="2025-04-22T16:30:08.224281" level="INFO">Starting process:
 "c:\Users\Yin Yu\Documents\cv_automation\Robot/video.bat"</msg>
-<msg time="2025-04-15T16:36:56.682620" level="INFO">Waiting for process to complete.</msg>
-<msg time="2025-04-15T16:37:08.837176" level="INFO">Process completed.</msg>
+<msg time="2025-04-22T16:30:08.230790" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-04-22T16:30:20.174678" level="INFO">Process completed.</msg>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${BATCH_SCRIPT}</arg>
 <doc>Runs a process and waits for it to complete.</doc>
-<status status="PASS" start="2025-04-15T16:36:56.667438" elapsed="12.170739"/>
+<status status="PASS" start="2025-04-22T16:30:08.224281" elapsed="11.951398"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-04-15T16:37:13.854036" level="INFO">Slept 5 seconds.</msg>
+<msg time="2025-04-22T16:30:25.179256" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-04-15T16:37:08.840177" elapsed="5.013859"/>
+<status status="PASS" start="2025-04-22T16:30:20.175679" elapsed="5.003577"/>
 </kw>
-<status status="PASS" start="2025-04-15T16:36:56.667438" elapsed="17.186598"/>
+<status status="PASS" start="2025-04-22T16:30:08.224281" elapsed="16.954975"/>
 </kw>
-<kw name="Predict From Directory Green">
-<kw name="Predict Directory Green" owner="Predict">
-<msg time="2025-04-15T16:37:18.664625" level="INFO">Reading Image: c:\Users\Yin Yu\Documents\cv_automation\Robot/pictures\photo.jpg</msg>
-<msg time="2025-04-15T16:37:20.083123" level="INFO">Prediction result: cyan</msg>
-<msg time="2025-04-15T16:37:20.083123" level="ERROR">Unexpected result 'cyan' for image: c:\Users\Yin Yu\Documents\cv_automation\Robot/pictures\photo.jpg</msg>
-<msg time="2025-04-15T16:37:20.084116" level="INFO">Model Loaded: c:\Users\Yin Yu\Documents\cv_automation\Robot/image_multiclass_model.h5
+<kw name="Predict From Directory Yellow">
+<kw name="Predict Directory Yellow" owner="Predict">
+<msg time="2025-04-22T16:30:28.139422" level="INFO">Reading Image: c:\Users\Yin Yu\Documents\cv_automation\Robot/pictures\photo.jpg</msg>
+<msg time="2025-04-22T16:30:28.532815" level="INFO">Prediction result: yellow</msg>
+<msg time="2025-04-22T16:30:28.533815" level="INFO">Model Loaded: c:\Users\Yin Yu\Documents\cv_automation\Robot/multiclass_img2_model.h5
 Reading Image:c:\Users\Yin Yu\Documents\cv_automation\Robot/pictures\photo.jpg
 
 1/1 [==============================] - ETA: 0s
-1/1 [==============================] - 1s 1s/step</msg>
-<msg time="2025-04-15T16:37:20.085114" level="INFO">${result} = FAIL</msg>
+1/1 [==============================] - 0s 345ms/step</msg>
+<msg time="2025-04-22T16:30:28.533815" level="INFO">${result} = PASS</msg>
 <var>${result}</var>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${MODEL_PATH}</arg>
 <arg>c:\\Users\\Yin Yu\\Documents\\cv_automation\\Robot/${IMAGE_PATH}</arg>
-<status status="PASS" start="2025-04-15T16:37:13.854959" elapsed="6.230155"/>
+<status status="PASS" start="2025-04-22T16:30:25.181249" elapsed="3.352566"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
-<msg time="2025-04-15T16:37:20.085114" level="FAIL">FAIL != PASS</msg>
 <arg>${result}</arg>
 <arg>PASS</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="FAIL" start="2025-04-15T16:37:20.085114" elapsed="0.001011">FAIL != PASS</status>
+<status status="PASS" start="2025-04-22T16:30:28.533815" elapsed="0.000000"/>
 </kw>
-<status status="FAIL" start="2025-04-15T16:37:13.854959" elapsed="6.231166">FAIL != PASS</status>
+<status status="PASS" start="2025-04-22T16:30:25.180249" elapsed="3.354566"/>
 </kw>
-<doc>Check static green or flag faulty</doc>
-<status status="FAIL" start="2025-04-15T16:36:54.625487" elapsed="25.460638">FAIL != PASS</status>
+<doc>Check static yellow or flag faulty</doc>
+<status status="PASS" start="2025-04-22T16:30:06.638515" elapsed="21.896300"/>
 </test>
-<status status="FAIL" start="2025-04-15T16:36:52.146910" elapsed="27.940203"/>
+<status status="PASS" start="2025-04-22T16:30:04.236518" elapsed="24.299297"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Prediction" id="s1" pass="0" fail="1" skip="0">Prediction</stat>
+<stat name="Prediction" id="s1" pass="1" fail="0" skip="0">Prediction</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-15T16:37:20.083123" level="ERROR">Unexpected result 'cyan' for image: c:\Users\Yin Yu\Documents\cv_automation\Robot/pictures\photo.jpg</msg>
 </errors>
 </robot>

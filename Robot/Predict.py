@@ -5,16 +5,16 @@ from robot.api.deco import keyword
 import os
 from robot.api import logger  # Import Robot Framework logger
 
-MODEL = "cv-automation\models\image_multiclass_model.h5"
+MODEL = "cv-automation\models\multiclass_img2_model.h5"
 DIRECTORY = r"pictures/"
-img_size = 250
+img_size = 224
 class_indices = {'blue': 0, 'cyan': 1, 'faulty': 2, 'green': 3, 'orange': 4, 'pink': 5, 'red': 6, 'white': 7, 'yellow': 8}
 
 def preprocess_img(img):
     img = image.load_img(img, target_size=(img_size, img_size))
-    img_array = image.img_to_array(img)                              # converts image to Numpy array -> (250,250,3)
+    img_array = image.img_to_array(img)                              # converts image to Numpy array -> (224,224,3)
     img_array = img_array / 255.0                                    # normalization
-    img_array = np.expand_dims(img_array, axis=0)                    # adds a batch dimension -> (1, 250, 250, 3)
+    img_array = np.expand_dims(img_array, axis=0)                    # adds a batch dimension -> (1, 224, 224, 3)
     return img_array
 
 def LoadModel(model_path):

@@ -108,3 +108,53 @@
 
 [2025-04-15 16:37:07] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
 
+[2025-04-22 16:18:57] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:18:57] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:18:57] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:19:56] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:19:56] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:19:56] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:23:10] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:23:10] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:23:10] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:23:52] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:23:52] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:23:53] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:24:26] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:24:26] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:24:26] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:25:13] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:25:13] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:25:13] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:25:47] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:25:47] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:25:47] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:26:23] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:26:23] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:26:23] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:27:02] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:27:02] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:27:02] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:30:19] Picture Path: c:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-22 16:30:19] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
+[2025-04-22 16:30:19] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\photo.jpg
+
