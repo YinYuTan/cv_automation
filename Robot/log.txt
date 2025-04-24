@@ -9,3 +9,38 @@
 
 [2025-04-10 15:12:16] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
 
+[2025-04-24 11:21:55] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 11:21:55] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 11:21:55] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:12:01] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:12:01] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:12:02] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:14:25] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:14:25] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:14:25] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:17:04] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:17:04] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:17:04] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:20:19] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:20:19] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:20:19] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:21:27] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:21:27] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:21:28] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:22:35] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-04-24 14:22:35] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-04-24 14:22:35] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+

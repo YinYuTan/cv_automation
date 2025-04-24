@@ -5,8 +5,8 @@ from robot.api.deco import keyword
 import os
 from robot.api import logger  # Import Robot Framework logger
 
-MODEL = "cv-automation\models\multiclass_img2_model.h5"
-DIRECTORY = r"pictures/"
+# MODEL = "cv-automation\models\multiclass_img2_model_v9.h5"
+# DIRECTORY = r"pictures/"
 img_size = 224
 class_indices = {'blue': 0, 'cyan': 1, 'faulty': 2, 'green': 3, 'orange': 4, 'pink': 5, 'red': 6, 'white': 7, 'yellow': 8}
 
