@@ -46,13 +46,12 @@ pipeline{
         }
         stage('Download Model') {
             steps {
-                sh '''
-                    mkdir -p models
-                    echo "Downloading model from S3..."
-                    curl -v -f -o models/multiclass_v9.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+                bat '''
+                    if not exist models mkdir models
+                    curl -o models\\multiclass_v9.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
                 '''
             }
-        }        
+        }    
         stage('Run Robot'){
             steps{
                 script{

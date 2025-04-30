@@ -41,6 +41,44 @@ def Predict(model, img, class_indices):
         print(f"Error loading model: {e}")
         model = None
 
+@keyword("Log Embedded Image")
+def log_embedded_image(image_path):
+    import base64
+    import os
+    from robot.api import logger
+
+    if not os.path.exists(image_path):
+        raise FileNotFoundError(f"Image not found: {image_path}")
+
+    with open(image_path, "rb") as img_file:
+        ext = os.path.splitext(image_path)[1][1:].lower()
+        encoded = base64.b64encode(img_file.read()).decode('utf-8')
+        tag = f'<img src="data:image/{ext};base64,{encoded}" width="300"/>'
+        logger.info(tag, html=True)
+
+
+@keyword("Predict Directory Colour")
+def PredictDirectoryColour(model_path, directory, expected_color):
+    try:
+        model = LoadModel(model_path)
+        for files in os.listdir(os.path.join(directory)):
+            img_path = os.path.join(directory, files)
+            logger.info(f"Reading Image: {img_path}")
+            print(f"Reading Image:{img_path}")
+            result = Predict(model, img_path, multiclass_indices)
+            logger.info(f"Prediction result: {result}")
+            if result == expected_color:
+                return "PASS"
+            else:
+                    # logger.info("All Images passed.")
+                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
+                    return "FAIL"
+            
+    except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
+        print(f"Error loading model or directory: {e}")
+        return "FAIL"
+
 @keyword("Predict Directory Green")
 def PredictDirectoryGreen(model_path, directory):
     try:
