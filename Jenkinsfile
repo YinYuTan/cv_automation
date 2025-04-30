@@ -48,10 +48,25 @@ pipeline{
             steps {
                 bat '''
                     if not exist models mkdir models
-                    curl -o models\\multiclass_img2_model_v9 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+
+                    set "MODEL_PATH=models\\multiclass_img2_model_v9.h5"
+
+                    if exist %MODEL_PATH% (
+                        for %%I in (%MODEL_PATH%) do set "SIZE=%%~zI"
+                        if %SIZE% GEQ 530000000 (
+                            echo Model already exists and is complete. Skipping download.
+                        ) else (
+                            echo Incomplete model found. Re-downloading...
+                            del %MODEL_PATH%
+                            curl -o %MODEL_PATH% https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+                        )
+                    ) else (
+                        echo Model not found. Downloading...
+                        curl -o %MODEL_PATH% https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+                    )
                 '''
             }
-        }    
+        }
         stage('Run Robot'){
             steps{
                 script{
