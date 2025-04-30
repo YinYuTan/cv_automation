@@ -48,7 +48,8 @@ pipeline{
             steps {
                 sh '''
                     mkdir -p models
-                    curl -o models/binary_model.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+                    echo "Downloading model from S3..."
+                    curl -v -f -o models/multiclass_v9.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
                 '''
             }
         }        
