@@ -109,7 +109,7 @@ Move Image To Color Name
     ${dst}=    Set Variable    ${CURDIR}/${IMAGE_PATH}/${color}.jpg
     Run Keyword And Continue On Failure    File Should Exist    ${src}
     Move File    ${src}    ${dst}
-    Set Suite Variable    ${IMAGE_FILE}    ${dst}
+    Set Test Variable     ${IMAGE_FILE}    ${dst}
 
 Log And Embed Image
     File Should Exist    ${IMAGE_FILE}
@@ -121,9 +121,8 @@ List Image Folder
     Log Many     Found image files:    ${files}
 
 Delete Image
-    File Should Exist    ${IMAGE_FILE}
-    Remove File          ${IMAGE_FILE}
-
+    Run Keyword And Ignore Error    File Should Exist    ${IMAGE_FILE}
+    Run Keyword And Ignore Error    Remove File          ${IMAGE_FILE}
 
 *** Test Cases ***
 Test Image Classification Green
