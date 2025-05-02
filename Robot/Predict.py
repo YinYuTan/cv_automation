@@ -5,7 +5,9 @@ from robot.api.deco import keyword
 import os
 from robot.api import logger  # Import Robot Framework logger
 
-MODEL_PATH = 'cv_automation/models/multiclass_img2_model_v11.h5'
+script_dir = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(script_dir, '..', 'models', 'multiclass_img2_model_v11.h5')
+MODEL_PATH = os.path.abspath(MODEL_PATH) 
 # MODEL_PATH = "models/multiclass_img2_model_v11.h5"
 # model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # print(f"Model Loaded: {MODEL_PATH}")
@@ -90,7 +92,7 @@ def PredictDirectoryGreen(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "green":
                 return "PASS"
@@ -115,7 +117,7 @@ def PredictDirectoryRed(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "red":
                 return "PASS"
@@ -140,7 +142,7 @@ def PredictDirectoryPink(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "pink":
                 return "PASS"
@@ -165,7 +167,7 @@ def PredictDirectoryWhite(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "white":
                 return "PASS"
@@ -190,7 +192,7 @@ def PredictDirectoryCyan(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "cyan":
                 return "PASS"
@@ -215,7 +217,7 @@ def PredictDirectoryBlue(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "blue":
                 return "PASS"
@@ -240,7 +242,7 @@ def PredictDirectoryOrange(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "orange":
                 return "PASS"
@@ -265,7 +267,7 @@ def PredictDirectoryYellow(directory):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
             print(f"Reading Image:{img_path}")
-            result = Predict(img_path, class_indices)
+            result = Predict(model, img_path, class_indices)
             logger.info(f"Prediction result: {result}")
             if result == "yellow":
                 return "PASS"

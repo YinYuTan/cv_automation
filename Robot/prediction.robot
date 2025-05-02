@@ -113,7 +113,6 @@ Move Image To Color Name
 
 Log And Embed Image
     File Should Exist    ${IMAGE_FILE}
-    Log Many    Embedding image for prediction: ${IMAGE_FILE}
     Log Embedded Image   ${IMAGE_FILE}
 
 List Image Folder
