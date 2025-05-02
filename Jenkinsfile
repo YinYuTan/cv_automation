@@ -48,9 +48,9 @@ pipeline{
             steps {
                 bat '''
                     if not exist models mkdir models
-                    if not exist models\\multiclass_img2_model_v9.h5 (
+                    if not exist models\\multiclass_img2_model_v11.h5 (
                         echo Model not found. Downloading...
-                        curl -o models\\multiclass_img2_model_v9.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v9.h5
+                        curl -o models\\multiclass_img2_model_v11.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v11.h5
                     ) else (
                         echo Model already exists. Skipping download.
                     )
