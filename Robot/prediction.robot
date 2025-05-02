@@ -107,12 +107,18 @@ Move Image To Color Name
     [Arguments]    ${color}
     ${src}=    Set Variable    ${CURDIR}/${IMAGE_PATH}/photo.jpg
     ${dst}=    Set Variable    ${CURDIR}/${IMAGE_PATH}/${color}.jpg
+    Run Keyword And Continue On Failure    File Should Exist    ${src}
     Move File    ${src}    ${dst}
     Set Suite Variable    ${IMAGE_FILE}    ${dst}
 
 Log And Embed Image
     File Should Exist    ${IMAGE_FILE}
+    Log Many    Embedding image for prediction: ${IMAGE_FILE}
     Log Embedded Image   ${IMAGE_FILE}
+
+List Image Folder
+    ${files}=    List Files In Directory    ${CURDIR}/${IMAGE_PATH}
+    Log Many     Found image files:    ${files}
 
 Delete Image
     File Should Exist    ${IMAGE_FILE}
@@ -127,6 +133,7 @@ Test Image Classification Green
     Check If Chroma Status Is Complete Green
     Take Pictures Using Webcam
     Move Image To Color Name    green
+    List Image Folder
     Log And Embed Image
     Predict From Directory Green
 
@@ -137,6 +144,7 @@ Test Image Classification Red
     Check If Chroma Status Is Complete Red
     Take Pictures Using Webcam
     Move Image To Color Name    red
+    List Image Folder
     Log And Embed Image
     Predict From Directory Red
 
@@ -147,6 +155,7 @@ Test Image Classification Pink
     Check If Chroma Status Is Complete Pink
     Take Pictures Using Webcam
     Move Image To Color Name    pink
+    List Image Folder
     Log And Embed Image
     Predict From Directory Pink
 
@@ -157,6 +166,7 @@ Test Image Classification White
     Check If Chroma Status Is Complete White
     Take Pictures Using Webcam
     Move Image To Color Name    white
+    List Image Folder
     Log And Embed Image
     Predict From Directory White
 
@@ -167,6 +177,7 @@ Test Image Classification Cyan
     Check If Chroma Status Is Complete Cyan
     Take Pictures Using Webcam
     Move Image To Color Name    cyan
+    List Image Folder
     Log And Embed Image
     Predict From Directory Cyan
 
@@ -177,6 +188,7 @@ Test Image Classification Blue
     Check If Chroma Status Is Complete Blue
     Take Pictures Using Webcam
     Move Image To Color Name    blue
+    List Image Folder
     Log And Embed Image
     Predict From Directory Blue
 
@@ -187,6 +199,7 @@ Test Image Classification Orange
     Check If Chroma Status Is Complete Orange
     Take Pictures Using Webcam
     Move Image To Color Name    orange
+    List Image Folder
     Log And Embed Image
     Predict From Directory Orange
 
@@ -197,6 +210,7 @@ Test Image Classification Yellow
     Check If Chroma Status Is Complete Yellow
     Take Pictures Using Webcam
     Move Image To Color Name    yellow
+    List Image Folder
     Log And Embed Image
     Predict From Directory Yellow
 
