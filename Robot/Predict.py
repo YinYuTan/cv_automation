@@ -8,6 +8,7 @@ from robot.api import logger  # Import Robot Framework logger
 script_dir = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(script_dir, '..', 'models', 'multiclass_img2_model_v11.h5')
 MODEL_PATH = os.path.abspath(MODEL_PATH) 
+model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # MODEL_PATH = "models/multiclass_img2_model_v11.h5"
 # model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # print(f"Model Loaded: {MODEL_PATH}")
@@ -22,10 +23,10 @@ def preprocess_img(img):
     img_array = np.expand_dims(img_array, axis=0)                    # adds a batch dimension -> (1, 224, 224, 3)
     return img_array
 
-def LoadModel(MODEL_PATH):
-    model = tf.keras.models.load_model(MODEL_PATH, compile=False)
-    print(f"Model Loaded: {MODEL_PATH}")
-    return model
+# def LoadModel(MODEL_PATH):
+#     model = tf.keras.models.load_model(MODEL_PATH, compile=False)
+#     print(f"Model Loaded: {MODEL_PATH}")
+#     return model
 
 def Predict(model, img, class_indices):
     try:
@@ -87,7 +88,6 @@ def log_embedded_image(image_path):
 @keyword("Predict Directory Green")
 def PredictDirectoryGreen(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -112,7 +112,6 @@ def PredictDirectoryGreen(directory):
 @keyword("Predict Directory Red")
 def PredictDirectoryRed(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -137,7 +136,6 @@ def PredictDirectoryRed(directory):
 @keyword("Predict Directory Pink")
 def PredictDirectoryPink(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -162,7 +160,6 @@ def PredictDirectoryPink(directory):
 @keyword("Predict Directory White")
 def PredictDirectoryWhite(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -187,7 +184,6 @@ def PredictDirectoryWhite(directory):
 @keyword("Predict Directory Cyan")
 def PredictDirectoryCyan(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -212,7 +208,6 @@ def PredictDirectoryCyan(directory):
 @keyword("Predict Directory Blue")
 def PredictDirectoryBlue(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -237,7 +232,6 @@ def PredictDirectoryBlue(directory):
 @keyword("Predict Directory Orange")
 def PredictDirectoryOrange(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
@@ -262,7 +256,6 @@ def PredictDirectoryOrange(directory):
 @keyword("Predict Directory Yellow")
 def PredictDirectoryYellow(directory):
     try:
-        model = LoadModel(MODEL_PATH)
         for files in os.listdir(os.path.join(directory)):
             img_path = os.path.join(directory, files)
             logger.info(f"Reading Image: {img_path}")
