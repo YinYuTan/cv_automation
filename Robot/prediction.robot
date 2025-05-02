@@ -72,35 +72,35 @@ Take Pictures Using Webcam
     Sleep    5s
 
 Predict From Directory Green
-    ${result}=    Predict Directory Green   ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Green   ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Red
-    ${result}=    Predict Directory Red     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Red     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Pink
-    ${result}=    Predict Directory Pink     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Pink     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory White
-    ${result}=    Predict Directory White     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory White     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Cyan
-    ${result}=    Predict Directory Cyan     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Cyan     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Blue
-    ${result}=    Predict Directory Blue     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Blue     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
     
 Predict From Directory Orange
-    ${result}=    Predict Directory Orange     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Orange     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Predict From Directory Yellow
-    ${result}=    Predict Directory Yellow     ${MODEL_PATH}    ${CURDIR}/${IMAGE_PATH}   
+    ${result}=    Predict Directory Yellow     ${CURDIR}/${IMAGE_PATH}   
     Should Be Equal    ${result}    PASS
 
 Move Image To Color Name
