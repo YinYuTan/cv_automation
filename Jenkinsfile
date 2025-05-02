@@ -57,6 +57,16 @@ pipeline{
                 '''
             }
         }
+        stage('Print Working Directory') {
+            steps {
+                bat 'cd'
+            }
+        }
+        stage('Cleanup Pictures') {
+            steps {
+                bat 'del /Q Robot\\pictures\\*.jpg'
+            }
+        }
         stage('Run Robot'){
             steps{
                 script{
