@@ -64,3 +64,18 @@
 
 [2025-04-25 17:46:26] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
 
+[2025-04-30 12:55:31] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\pictures
+[2025-04-30 12:55:31] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+
+[2025-04-30 12:55:32] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+
+[2025-04-30 12:56:49] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\pictures
+[2025-04-30 12:56:49] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+
+[2025-04-30 12:56:50] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+
+[2025-04-30 12:58:23] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\pictures
+[2025-04-30 12:58:23] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+
+[2025-04-30 12:58:23] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot_duo_model\photo.jpg
+

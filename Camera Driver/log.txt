@@ -23,3 +23,23 @@
 
 [2025-04-15 12:01:48] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
 
+[2025-05-02 10:00:37] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-05-02 10:00:37] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:38] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:39] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-05-02 10:00:39] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:39] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:40] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-05-02 10:00:40] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:40] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:41] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\pictures
+[2025-05-02 10:00:41] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
+[2025-05-02 10:00:41] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Camera Driver\photo.jpg
+
