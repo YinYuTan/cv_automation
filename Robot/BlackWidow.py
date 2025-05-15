@@ -39,14 +39,14 @@ def PerformChromaTestBlackWidowV4Green():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(green)
 
     isFinishedGreen = True
@@ -61,14 +61,14 @@ def PerformChromaTestBlackWidowV4Red():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(red)
 
     isFinishedRed = True
@@ -83,14 +83,14 @@ def PerformChromaTestBlackWidowV4Pink():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pink)
     
     isFinishedPink= True
@@ -105,14 +105,14 @@ def PerformChromaTestBlackWidowV4White():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(white)
     
     isFinishedWhite= True
@@ -127,14 +127,14 @@ def PerformChromaTestBlackWidowV4Cyan():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(cyan)
     
     isFinishedCyan= True
@@ -149,14 +149,14 @@ def PerformChromaTestBlackWidowV4Blue():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
-    asyncio.run(delay1())
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(blue)
     
     isFinishedBlue= True
@@ -171,14 +171,14 @@ def PerformChromaTestBlackWidowV4Orange():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement
-    asyncio.run(delay1())(pattern_dropdown)
+    asyncio.run(delay())(pattern_dropdown)
     driver.clickOnElement
-    asyncio.run(delay1())(static)
+    asyncio.run(delay())(static)
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(orange)
     
     isFinishedOrange= True
@@ -193,13 +193,13 @@ def PerformChromaTestBlackWidowV4Yellow():
     driver = SynapseWebDriverClass()
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(pattern_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(static)
 
     driver.clickOnElement(colour_dropdown)
-    asyncio.run(delay1())
+    asyncio.run(delay())
     driver.clickOnElement(yellow)
     
     isFinishedYellow= True
