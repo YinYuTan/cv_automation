@@ -24,9 +24,9 @@ colour_dropdown = '#body-wrapper > div > div.widget-col.col-right > div > div > 
 #     await asyncio.sleep(3)
 #     print("Done!")
 
-async def delay1():
+async def delay():
     print("Waiting 1 seconds...")
-    await asyncio.sleep(1)
+    await asyncio.sleep(0.5)
     print("Done!")
 
 @keyword("Perform Chroma Test BlackWidow V4 Green")
