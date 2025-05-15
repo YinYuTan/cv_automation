@@ -19,10 +19,10 @@ static = '#body-wrapper > div > div.widget-col.col-right > div > div > div > div
 # colour_dropdown = '#body-wrapper > div > div.widget-col.col-right.flex > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown > div.icon.expand'
 colour_dropdown = '#body-wrapper > div > div.widget-col.col-right > div > div > div > div:nth-child(2) > div.modes-area.active > div.flex.effects-area > div > div.dropdown-area.dropdown-color > div.s3-dropdown'
 
-async def delay3():
-    print("Waiting 3 seconds...")
-    await asyncio.sleep(3)
-    print("Done!")
+# async def delay3():
+#     print("Waiting 3 seconds...")
+#     await asyncio.sleep(3)
+#     print("Done!")
 
 async def delay1():
     print("Waiting 1 seconds...")
@@ -50,7 +50,7 @@ def PerformChromaTestBlackWidowV4Green():
     driver.clickOnElement(green)
 
     isFinishedGreen = True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Red")
 def PerformChromaTestBlackWidowV4Red():
@@ -72,7 +72,7 @@ def PerformChromaTestBlackWidowV4Red():
     driver.clickOnElement(red)
 
     isFinishedRed = True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Pink")
 def PerformChromaTestBlackWidowV4Pink():
@@ -94,7 +94,7 @@ def PerformChromaTestBlackWidowV4Pink():
     driver.clickOnElement(pink)
     
     isFinishedPink= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 White")
 def PerformChromaTestBlackWidowV4White():
@@ -116,7 +116,7 @@ def PerformChromaTestBlackWidowV4White():
     driver.clickOnElement(white)
     
     isFinishedWhite= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Cyan")
 def PerformChromaTestBlackWidowV4Cyan():
@@ -138,7 +138,7 @@ def PerformChromaTestBlackWidowV4Cyan():
     driver.clickOnElement(cyan)
     
     isFinishedCyan= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Blue")
 def PerformChromaTestBlackWidowV4Blue():
@@ -160,7 +160,7 @@ def PerformChromaTestBlackWidowV4Blue():
     driver.clickOnElement(blue)
     
     isFinishedBlue= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Orange")
 def PerformChromaTestBlackWidowV4Orange():
@@ -182,7 +182,7 @@ def PerformChromaTestBlackWidowV4Orange():
     driver.clickOnElement(orange)
     
     isFinishedOrange= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 @keyword("Perform Chroma Test BlackWidow V4 Yellow")
 def PerformChromaTestBlackWidowV4Yellow():
@@ -203,7 +203,7 @@ def PerformChromaTestBlackWidowV4Yellow():
     driver.clickOnElement(yellow)
     
     isFinishedYellow= True
-    asyncio.run(delay3())
+    # asyncio.run(delay3())
 
 
 @keyword("Check Status Green") 
