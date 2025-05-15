@@ -172,10 +172,10 @@ def PerformChromaTestBlackWidowV4Orange():
     driver.switchSynapseTabTo("BLACKWIDOW V4 75%")
     driver.clickOnElement(lighting_selector)
     asyncio.run(delay())
-    driver.clickOnElement
-    asyncio.run(delay())(pattern_dropdown)
-    driver.clickOnElement
-    asyncio.run(delay())(static)
+    driver.clickOnElement(pattern_dropdown)
+    asyncio.run(delay())
+    driver.clickOnElement(static)
+    asyncio.run(delay())
 
     driver.clickOnElement(colour_dropdown)
     asyncio.run(delay())
