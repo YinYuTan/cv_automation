@@ -6,7 +6,7 @@ import os
 from robot.api import logger  # Import Robot Framework logger
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(script_dir, '..', 'models', 'multiclass_img2_model_v11.h5')
+MODEL_PATH = os.path.join(script_dir, '..', 'models', 'image_recognition', 'multiclass_img2_model_v11.h5')
 MODEL_PATH = os.path.abspath(MODEL_PATH) 
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # MODEL_PATH = "models/multiclass_img2_model_v11.h5"
