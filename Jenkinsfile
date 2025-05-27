@@ -68,10 +68,10 @@ pipeline{
         //         bat 'del /Q Robot\\pictures\\*.jpg'
         //     }
         // }
-        stage('Cleanup Videos') {
-            steps {
-                bat 'del /Q Robot_vid\\video\\*.mp4'
-            }
+        // stage('Cleanup Videos') {
+        //     steps {
+        //         bat 'del /Q Robot_vid\\video\\*.mp4'
+        //     }
         }
         stage('Run Robot'){
             steps{
