@@ -1586,3 +1586,8 @@
 
 [2025-05-09 15:39:19] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
 
+[2025-05-27 11:23:31] Picture Path: C:\Users\Yin Yu\Documents\cv_automation\Robot\pictures
+[2025-05-27 11:23:31] Photo taken file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+
+[2025-05-27 11:23:31] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
+

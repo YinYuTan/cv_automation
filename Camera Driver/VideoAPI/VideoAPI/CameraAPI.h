@@ -236,22 +236,49 @@ namespace API {
                     throw_hresult(E_POINTER);
                 }
 
-                // Get the SavedPictures folder
-                auto picturesFolder = Windows::Storage::KnownFolders::SavedPictures();
+                //// Get the SavedPictures folder
+                //auto picturesFolder = Windows::Storage::KnownFolders::SavedPictures();
 
-                // Create or open the "videos" folder
-                auto videoFolder = picturesFolder.CreateFolderAsync(L"videos", Windows::Storage::CreationCollisionOption::OpenIfExists).get();
+                //// Create or open the "videos" folder
+                //auto videoFolder = picturesFolder.CreateFolderAsync(L"videos", Windows::Storage::CreationCollisionOption::OpenIfExists).get();
 
-                // Create a unique file name for the video
-                auto videoFile = videoFolder.CreateFileAsync(L"recording.mp4", Windows::Storage::CreationCollisionOption::GenerateUniqueName).get();
-                std::wcout << L"Recording file will be saved as: " << videoFile.Path().c_str() << "\n";
+                //// Create a unique file name for the video
+                //auto videoFile = videoFolder.CreateFileAsync(L"recording.mp4", Windows::Storage::CreationCollisionOption::GenerateUniqueName).get();
+                //std::wcout << L"Recording file will be saved as: " << videoFile.Path().c_str() << "\n";
+
+                // Get the executable path
+                wchar_t buffer[MAX_PATH];
+                GetModuleFileName(0, buffer, MAX_PATH);
+                std::filesystem::path exePath(buffer);
+                auto parentDir = exePath.parent_path();
+
+                // Create a "video" folder in the parent directory
+                std::filesystem::path videoPath = parentDir / "video";
+                if (!std::filesystem::exists(videoPath)) {
+                    std::filesystem::create_directory(videoPath);
+                    LogMessage(L"Creating video folder: " + videoPath.wstring());
+                }
+
+                // Generate a unique file name
+                std::filesystem::path videoFilePath = videoPath / "recording.mp4";
+                int count = 1;
+                while (std::filesystem::exists(videoFilePath)) {
+                    videoFilePath = videoPath / (L"Recording_" + std::to_wstring(count++) + L".mp4");
+                }
+
+                std::wcout << L"Recording file will be saved as: " << videoFilePath.wstring() << "\n";
+                LogMessage(L"Recording file will be saved as: " + videoFilePath.wstring());
 
                 // Set encoding properties for the video
                 auto encodingProperties = MediaEncodingProfile::CreateMp4(VideoEncodingQuality::HD1080p);
 
+                // Get StorageFolder from file path
+                auto storageFolder = winrt::Windows::Storage::StorageFolder::GetFolderFromPathAsync(videoPath.wstring()).get();
+                auto storageFile = storageFolder.CreateFileAsync(videoFilePath.filename().wstring(), winrt::Windows::Storage::CreationCollisionOption::GenerateUniqueName).get();
+
                 // Start video recording
                 std::cout << "Recording started...\n";
-                mediaCapture.StartRecordToStorageFileAsync(encodingProperties, videoFile).get();
+                mediaCapture.StartRecordToStorageFileAsync(encodingProperties, storageFile).get();
 
                 // Wait for the specified duration
                 std::cout << "Recording in progress...\n";
@@ -260,14 +287,18 @@ namespace API {
                 // Stop video recording
                 mediaCapture.StopRecordAsync().get();
                 std::cout << "Recording stopped. Video saved to: ";
-                std::wcout << videoFile.Path().c_str() << "\n";
+                std::wcout << storageFile.Path().c_str() << "\n";
             }
             catch (hresult_error const& ex) {
                 std::wcerr << L"Failed to record video: " << ex.message().c_str() << L" (HRESULT: " << std::hex << ex.code() << L")\n";
+                LogMessage(L"Failed to record video: " + std::wstring(ex.message()) + L" (HRESULT: 0x" + std::to_wstring(ex.code().value) + L")");
                 throw;
             }
             catch (std::exception const& ex) {
                 std::cerr << "Standard exception caught: " << ex.what() << std::endl;
+                std::string errorMsg = "Standard exception caught: " + std::string(ex.what());
+                std::wstring wideErrorMsg(errorMsg.begin(), errorMsg.end());
+                LogMessage(wideErrorMsg);
                 throw;
             }
         }

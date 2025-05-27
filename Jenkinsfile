@@ -45,27 +45,32 @@ pipeline{
                 }
             }
         }
-        stage('Download Model') {
-            steps {
-                bat '''
-                    if not exist models mkdir models
-                    if not exist models\\multiclass_img2_model_v11.h5 (
-                        echo Model not found. Downloading...
-                        curl -o models\\multiclass_img2_model_v11.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v11.h5
-                    ) else (
-                        echo Model already exists. Skipping download.
-                    )
-                '''
-            }
-        }
+        // stage('Download Model') {
+        //     steps {
+        //         bat '''
+        //             if not exist models mkdir models
+        //             if not exist models\\multiclass_img2_model_v11.h5 (
+        //                 echo Model not found. Downloading...
+        //                 curl -o models\\multiclass_img2_model_v11.h5 https://jenkins-models-test.s3.ap-southeast-1.amazonaws.com/multiclass_img2_model_v11.h5
+        //             ) else (
+        //                 echo Model already exists. Skipping download.
+        //             )
+        //         '''
+        //     }
+        // }
         stage('Print Working Directory') {
             steps {
                 bat 'cd'
             }
         }
-        stage('Cleanup Pictures') {
+        // stage('Cleanup Pictures') {
+        //     steps {
+        //         bat 'del /Q Robot\\pictures\\*.jpg'
+        //     }
+        // }
+        stage('Cleanup Videos') {
             steps {
-                bat 'del /Q Robot\\pictures\\*.jpg'
+                bat 'del /Q Robot\\video\\*.mp4'
             }
         }
         stage('Run Robot'){
@@ -73,7 +78,7 @@ pipeline{
                 script{
                     bat """
                         call venv\\Scripts\\activate
-                        robot --outputdir results Robot/prediction.robot
+                        robot --outputdir results Robot_vid/prediction.robot
                     """
                 }
             }

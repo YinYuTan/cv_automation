@@ -1,107 +1,173 @@
 from tensorflow.keras.preprocessing import image
 import tensorflow as tf
+import cv2
 import numpy as np
 from robot.api.deco import keyword
 import os
 from robot.api import logger  # Import Robot Framework logger
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(script_dir, '..', 'models', 'image_recognition', 'multiclass_img2_model_v11.h5')
+MODEL_PATH = os.path.join(script_dir, '..', 'models', 'video_recognition', 'video_model11.h5')
 MODEL_PATH = os.path.abspath(MODEL_PATH) 
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # MODEL_PATH = "models/multiclass_img2_model_v11.h5"
 # model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # print(f"Model Loaded: {MODEL_PATH}")
 
-img_size = 224
-class_indices = {'blue': 0, 'cyan': 1, 'faulty': 2, 'green': 3, 'orange': 4, 'pink': 5, 'red': 6, 'white': 7, 'yellow': 8}
+img_size=160
+target_size=(img_size, img_size)
+frame_count = 300
+class_indices = {'starlight': 0, 'wave': 1, 'spectrum_cycling': 2}
 
-def preprocess_img(img):
-    img = image.load_img(img, target_size=(img_size, img_size))
-    img_array = image.img_to_array(img)                              # converts image to Numpy array -> (224,224,3)
-    img_array = img_array / 255.0                                    # normalization
-    img_array = np.expand_dims(img_array, axis=0)                    # adds a batch dimension -> (1, 224, 224, 3)
-    return img_array
+def load_video_frames(video_path):
+    cap = cv2.VideoCapture(str(video_path))
+    frames = []
+    while len(frames) < frame_count and cap.isOpened():
+        ret, frame = cap.read()
+        if not ret or frame is None:
+            break
+        frame = cv2.resize(frame, target_size)
+        frame = frame.astype(np.float32)
+        frame = frame / 255.0
+        frames.append(frame)
+    cap.release()
+    if len(frames) < frame_count:
+        pad_frame = np.zeros((target_size[1], target_size[0], 3), dtype=np.float32)
+        frames += [pad_frame] * (frame_count - len(frames))
+    elif len(frames) > frame_count:
+        frames = frames[:frame_count]  # Trim if needed
+    return np.array(frames, dtype=np.float32)
 
-# def LoadModel(MODEL_PATH):
-#     model = tf.keras.models.load_model(MODEL_PATH, compile=False)
-#     print(f"Model Loaded: {MODEL_PATH}")
-#     return model
-
-def Predict(model, img, class_indices):
+def Predict(model, vid, class_indices):
     try:
-        img_arr = preprocess_img(img)
-        prediction = model.predict(img_arr)                          # returns probabilities for each class (via softmax)
-        prediction_index = np.argmax(prediction[0])                  # returns index of highest probability
+        vid_arr = load_video_frames(vid)
+        input_tensor = np.expand_dims(vid_arr, axis=0)
+        prediction = model.predict(input_tensor)[0]                 # returns probabilities for each class (via softmax)
+        prediction_index = np.argmax(prediction)               # returns index of highest probability
 
         index_to_class = {v: k for k, v in class_indices.items()}    # do opp. mapping for index to colour e.g 0: 'blue' , …
-        predicted_label = index_to_class[prediction_index]           # returns colour name
+        predicted_label = index_to_class[prediction_index]           # returns class name
 
-        # I actually don't really understand how this prediction works
-        # confidence = prediction if prediction > 0.5 else 1 - prediction
-        # print(f"Raw Prediction: {prediction}")
-        # print(f"{prediction_class}--->{confidence * 100:.2f}%")
-        return predicted_label 
+        return predicted_label, prediction
 
     except Exception as e:
         print(f"Error loading model: {e}")
         model = None
 
-@keyword("Log Embedded Image")
-def log_embedded_image(image_path):
+@keyword("Log Embedded Frame")
+def log_embedded_frame(video_path):
+    import cv2
     import base64
-    import os
     from robot.api import logger
 
-    if not os.path.exists(image_path):
-        raise FileNotFoundError(f"Image not found: {image_path}")
+    cap = cv2.VideoCapture(str(video_path))
+    ret, frame = cap.read()
+    cap.release()
 
-    with open(image_path, "rb") as img_file:
-        ext = os.path.splitext(image_path)[1][1:].lower()
-        encoded = base64.b64encode(img_file.read()).decode('utf-8')
-        tag = f'<img src="data:image/{ext};base64,{encoded}" width="300"/>'
-        logger.info(tag, html=True)
+    if not ret or frame is None:
+        logger.warn(f"Could not read frame from video: {video_path}")
+        return
 
+    frame = cv2.resize(frame, (300, 200))
 
-# @keyword("Predict Directory Colour")
-# def PredictDirectoryColour(model_path, directory, expected_color):
-#     try:
-#         model = LoadModel(MODEL_PATH)
-#         for files in os.listdir(os.path.join(directory)):
-#             img_path = os.path.join(directory, files)
-#             logger.info(f"Reading Image: {img_path}")
-#             print(f"Reading Image:{img_path}")
-#             result = Predict(img_path, class_indices)
-#             logger.info(f"Prediction result: {result}")
-#             if result == expected_color:
-#                 return "PASS"
-#             else:
-#                     # logger.info("All Images passed.")
-#                     logger.error(f"Unexpected result '{result}' for image: {img_path}")
-#                     return "FAIL"
-            
-#     except Exception as e:
-#         logger.error(f"Exception occurred: {str(e)}")
-#         print(f"Error loading model or directory: {e}")
-#         return "FAIL"
+    # Encode frame to JPEG in memory
+    ret, buf = cv2.imencode('.jpg', frame)
+    if not ret:
+        logger.warn("Failed to encode frame to JPEG")
+        return
 
-@keyword("Predict Directory Green")
-def PredictDirectoryGreen(directory):
+    b64 = base64.b64encode(buf.tobytes()).decode('utf-8')
+    img_tag = f'<img src="data:image/jpeg;base64,{b64}" width="300"/>'
+    logger.info("Showing first frame of video")
+
+    logger.info(img_tag, html=True)
+
+@keyword("Predict Directory Spectrum")
+def PredictDirectorySpectrum(directory):
     try:
         for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "green":
+            vid_path = os.path.join(directory, files)
+            logger.info(f"Reading Video: {vid_path}")
+            print(f"Reading Video:{vid_path}")
+
+            # result = Predict(model, vid_path, class_indices)
+            predicted_label, prediction_probs = Predict(model, vid_path, class_indices)
+
+            if prediction_probs is not None:
+                logger.info("Prediction probabilities:\n" +
+                            np.array2string(prediction_probs, precision=4, suppress_small=True))
+
+            logger.info(f"Prediction result: {predicted_label}")
+            if predicted_label == "spectrum_cycling":
                 return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
+            elif predicted_label == "faulty":
+                logger.error(f"Test Failed: {predicted_label} is faulty.")
                 return "FAIL"
             else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
+                    # logger.info("All Videos passed.")
+                    logger.error(f"Unexpected result '{predicted_label}' for video: {vid_path}")
+                    return "FAIL"
+            
+    except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
+        print(f"Error loading model or directory: {e}")
+        return "FAIL"
+    
+@keyword("Predict Directory Wave")
+def PredictDirectoryWave(directory):
+    try:
+        for files in os.listdir(os.path.join(directory)):
+            vid_path = os.path.join(directory, files)
+            logger.info(f"Reading Video: {vid_path}")
+            print(f"Reading Video:{vid_path}")
+
+            # result = Predict(model, vid_path, class_indices)
+            predicted_label, prediction_probs = Predict(model, vid_path, class_indices)
+
+            if prediction_probs is not None:
+                logger.info("Prediction probabilities:\n" +
+                            np.array2string(prediction_probs, precision=4, suppress_small=True))
+
+            logger.info(f"Prediction result: {predicted_label}")
+            if predicted_label == "wave":
+                return "PASS"
+            elif predicted_label == "faulty":
+                logger.error(f"Test Failed: {predicted_label} is faulty.")
+                return "FAIL"
+            else:
+                    # logger.info("All Videos passed.")
+                    logger.error(f"Unexpected result '{predicted_label}' for video: {vid_path}")
+                    return "FAIL"
+            
+    except Exception as e:
+        logger.error(f"Exception occurred: {str(e)}")
+        print(f"Error loading model or directory: {e}")
+        return "FAIL"
+        
+@keyword("Predict Directory Starlight")
+def PredictDirectoryStarlight(directory):
+    try:
+        for files in os.listdir(os.path.join(directory)):
+            vid_path = os.path.join(directory, files)
+            logger.info(f"Reading Video: {vid_path}")
+            print(f"Reading Video:{vid_path}")
+
+            # result = Predict(model, vid_path, class_indices)
+            predicted_label, prediction_probs = Predict(model, vid_path, class_indices)
+
+            if prediction_probs is not None:
+                logger.info("Prediction probabilities:\n" +
+                            np.array2string(prediction_probs, precision=4, suppress_small=True))
+
+            logger.info(f"Prediction result: {predicted_label}")
+            if predicted_label == "starlight":
+                return "PASS"
+            elif predicted_label == "faulty":
+                logger.error(f"Test Failed: {predicted_label} is faulty.")
+                return "FAIL"
+            else:
+                    # logger.info("All Videos passed.")
+                    logger.error(f"Unexpected result '{predicted_label}' for video: {vid_path}")
                     return "FAIL"
             
     except Exception as e:
@@ -109,170 +175,10 @@ def PredictDirectoryGreen(directory):
         print(f"Error loading model or directory: {e}")
         return "FAIL"
 
-@keyword("Predict Directory Red")
-def PredictDirectoryRed(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "red":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory Pink")
-def PredictDirectoryPink(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "pink":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory White")
-def PredictDirectoryWhite(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "white":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory Cyan")
-def PredictDirectoryCyan(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "cyan":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory Blue")
-def PredictDirectoryBlue(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "blue":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory Orange")
-def PredictDirectoryOrange(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "orange":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
-    
-@keyword("Predict Directory Yellow")
-def PredictDirectoryYellow(directory):
-    try:
-        for files in os.listdir(os.path.join(directory)):
-            img_path = os.path.join(directory, files)
-            logger.info(f"Reading Image: {img_path}")
-            print(f"Reading Image:{img_path}")
-            result = Predict(model, img_path, class_indices)
-            logger.info(f"Prediction result: {result}")
-            if result == "yellow":
-                return "PASS"
-            elif result == "faulty":
-                logger.error(f"Test Failed: {result} is faulty.")
-                return "FAIL"
-            else:
-                    # logger.info("All Images passed.")
-                    logger.error(f"Unexpected result '{result}' for image: {img_path}")
-                    return "FAIL"
-            
-    except Exception as e:
-        logger.error(f"Exception occurred: {str(e)}")
-        print(f"Error loading model or directory: {e}")
-        return "FAIL"
+    #Previous
+    # def preprocess_img(img):
+    #     img = image.load_img(img, target_size=(img_size, img_size))
+    #     img_array = image.img_to_array(img)                              # converts image to Numpy array -> (224,224,3)
+    #     img_array = img_array / 255.0                                    # normalization
+    #     img_array = np.expand_dims(img_array, axis=0)                    # adds a batch dimension -> (1, 224, 224, 3)
+    #     return img_array

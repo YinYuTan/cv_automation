@@ -1586,3 +1586,6 @@
 
 [2025-05-09 15:39:19] Photo saved to: C:\Users\Yin Yu\Documents\cv_automation\Robot\photo.jpg
 
+[2025-05-27 10:50:11] Creating video folder: C:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video
+[2025-05-27 10:50:11] Recording file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4
+[2025-05-27 11:24:10] Recording file will be saved as: C:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4

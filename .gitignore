@@ -164,3 +164,4 @@ models/video_recognition/transfer_model/config.json
 /jupyter_files/video_recognition/videomae-base-finetuned-subset/checkpoint-38
 /jupyter_files/video_recognition/videomae-base-finetuned-subset
 /models/video_recognition/transfer_model
+/Camera Driver/VideoAPI/.vs
