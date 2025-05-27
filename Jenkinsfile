@@ -31,7 +31,6 @@ pipeline{
                         pip install -r ./requirements.txt
                         pip install pillow
                         pip install --upgrade robotframework-seleniumlibrary
-                        pip install opencv-python==4.11.0
                     """
                 }
             }
