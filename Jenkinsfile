@@ -72,7 +72,7 @@ pipeline{
         //     steps {
         //         bat 'del /Q Robot_vid\\video\\*.mp4'
         //     }
-        }
+        // }
         stage('Run Robot'){
             steps{
                 script{
