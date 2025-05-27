@@ -70,7 +70,7 @@ pipeline{
         // }
         stage('Cleanup Videos') {
             steps {
-                bat 'del /Q Robot\\video\\*.mp4'
+                bat 'del /Q Robot_vid\\video\\*.mp4'
             }
         }
         stage('Run Robot'){
