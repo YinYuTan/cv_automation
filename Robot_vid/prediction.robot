@@ -102,6 +102,8 @@ Test Image Classification Starlight
     Predict From Directory Starlight
 
 
-# Test Image Faulty Scenario
-#     [Documentation]    Check faulty
-#     Predict From Directory Starlight
+Test Image Faulty Scenario
+    [Documentation]    Check faulty
+    Move Video To Class Name    faulty
+    Log And Embed Frame
+    Predict From Directory Starlight

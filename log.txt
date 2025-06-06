@@ -714,3 +714,4 @@
 [2025-05-27 13:27:22] Recording file will be saved as: c:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4
 [2025-05-27 13:29:11] Recording file will be saved as: c:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4
 [2025-05-29 15:28:43] Recording file will be saved as: c:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4
+[2025-06-06 14:10:59] Recording file will be saved as: c:\Users\Yin Yu\Documents\cv_automation\Robot_vid\video\recording.mp4
