@@ -7,8 +7,8 @@ import os
 from robot.api import logger  # Import Robot Framework logger
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-MODEL_PATH = os.path.join(script_dir, '..', 'models', 'video_recognition', 'video_model11.h5')
-# MODEL_PATH = os.path.join(script_dir, '..', 'models', 'video_recognition', 'video_darkfaulty_model4.h5')
+# MODEL_PATH = os.path.join(script_dir, '..', 'models', 'video_recognition', 'video_model11.h5')
+MODEL_PATH = os.path.join(script_dir, '..', 'models', 'video_recognition', 'video_darkfaulty_model4.h5')
 MODEL_PATH = os.path.abspath(MODEL_PATH) 
 model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 # MODEL_PATH = "models/multiclass_img2_model_v11.h5"
@@ -18,8 +18,8 @@ model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 img_size=160
 target_size=(img_size, img_size)
 frame_count = 300
-class_indices = {'starlight': 0, 'wave': 1, 'spectrum_cycling': 2}
-# class_indices = {'starlight': 0, 'wave': 1, 'spectrum_cycling': 2, 'faulty': 3}
+# class_indices = {'starlight': 0, 'wave': 1, 'spectrum_cycling': 2}
+class_indices = {'starlight': 0, 'wave': 1, 'spectrum_cycling': 2, 'faulty': 3}
 
 def load_video_frames(video_path):
     cap = cv2.VideoCapture(str(video_path))
