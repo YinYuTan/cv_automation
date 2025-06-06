@@ -102,6 +102,6 @@ Test Image Classification Starlight
     Predict From Directory Starlight
 
 
-# Test Image Faulty Scenario from phone
-#     [Documentation]    Check static yellow or flag faulty
-#     Predict From Directory Pink
+# Test Image Faulty Scenario
+#     [Documentation]    Check faulty
+#     Predict From Directory Starlight
