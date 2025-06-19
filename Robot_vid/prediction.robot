@@ -102,8 +102,25 @@ Test Image Classification Starlight
     Predict From Directory Starlight
 
 
-Test Image Faulty Scenario
-    [Documentation]    Check faulty
-    Move Video To Class Name    faulty
+# Test Image Faulty Scenario
+#     [Documentation]    Check faulty
+#     Move Video To Class Name    faulty
+#     Log And Embed Frame
+#     Predict From Directory Starlight
+
+# Test Image Blade Scenario
+#     [Documentation]    Check blade
+#     Move Video To Class Name    blade
+#     Log And Embed Frame
+#     Predict From Directory Wave
+
+Test Image Classification Starlight (Faulty scenario)
+    [Teardown]    Delete Video
+    [Documentation]    Check starlight
+    Set BlackWidow V4 Keyboard Chroma Starlight
+    Check If Chroma Status Is Complete Starlight
+    Take Video Using Webcam
+    Move Video To Class Name    starlight
+    List Image Folder
     Log And Embed Frame
     Predict From Directory Starlight
