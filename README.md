@@ -48,9 +48,9 @@ Store evaluation outputs under metrics/.
 Add environment-specific settings (e.g., camera index, resolution) as variables in test suites.
 
 ## Useful codes
-For most up-to-date image recognition model, refer to multiclass_img2_single_model.ipynb under image_recognition in jupyter_files.
+### For most up-to-date image recognition model, refer to multiclass_img2_single_model.ipynb under image_recognition in jupyter_files.
 Data preprocessing steps and model architecture and training are within this folder.
 
-For most up-to-date video recognition model, refer to 10s_pattern_wdark_faulty.ipynb under video_recognition in jupyter_files.
+### For most up-to-date video recognition model, refer to 10s_pattern_wdark_faulty.ipynb under video_recognition in jupyter_files.
 Data preprocessing steps and model architecture and training are within this folder. The different type of model architectures differ in some layers.
 Adjust the values accordingly after each training to see which trained model obtains the best result.
