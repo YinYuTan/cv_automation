@@ -33,16 +33,15 @@ python -m venv .venv
 pip install --upgrade pip
 pip install -r requirements.txt
 
-### 2) Run the test suite
-# Run all tests (example)
-robot Robot/
-# Or target a specific suite
-robot Robot_duo_model/
+### 2) Run test suites
+Robot/ : for image recognition related to static
+
+Robot_duo_model/ : for video recognition related to Spectrum, Wave, Starlight and Faulty
 
 ## Overview
 
-### 3) Work with notebooks
-jupyter notebook jupyter_files/
+### 3) Working with notebooks
+All experimental codes within jupyter_files/
 
 ### 4) Storing models and metrics
 Configuration
