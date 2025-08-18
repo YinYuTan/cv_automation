@@ -10,18 +10,18 @@ Automation project that mixes **UI/functional testing** with **computer-vision w
 - Licensed under **MIT**.
 
 ## Repository layout
-cv_automation/
-├─ Camera Driver/ # Camera capture/driver utilities
-├─ Robot/ # Image-recognition (static colors)
-├─ Robot_duo_model/ # Image-recognition (try for dual model)
-├─ Robot_vid/ # Video-recognition
-├─ jupyter_files/ # Notebooks for CV/ML experiments
-├─ metrics/ # Metrics or evaluation artifacts
-├─ models/ # Model weights/configs (if any)
-├─ Jenkinsfile # CI pipeline
-├─ requirements.txt # Python dependencies
-├─ report.html, log.html, output.xml, interactive_console_output.xml # Test reports
-└─ README.md, LICENSE
+- cv_automation/
+- ├─ Camera Driver/ # Camera capture/driver utilities
+- ├─ Robot/ # Image-recognition (static colors)
+- ├─ Robot_duo_model/ # Image-recognition (try for dual model)
+- ├─ Robot_vid/ # Video-recognition
+- ├─ jupyter_files/ # Notebooks for CV/ML experiments
+- ├─ metrics/ # Metrics or evaluation artifacts
+- ├─ models/ # Model weights/configs (if any)
+- ├─ Jenkinsfile # CI pipeline
+- ├─ requirements.txt # Python dependencies
+- ├─ report.html, log.html, output.xml, interactive_console_output.xml # Test reports
+- └─ README.md, LICENSE
 
 
 ## Quick start
